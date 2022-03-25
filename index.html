@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP1 VS HTTP2</title>
+</head>
+<body>
+
+</br>
+
+<div style="display:flex-row; justify-content:center ; margin:auto; width:50%; font-size: larger; font-family: 'Arial Narrow', sans-serif;border-left: 3px solid skyblue; padding-left: 150px;" >
+ <div style="background-color: skyblue; color:white; font-size: large;">
+   <h1>HTTP/1.x vs. HTTP/2 – The Difference Between the Two Protocols Explained</h1>
+ </div>
+ <h3 style="font-size: 30px;">Let’s Understand The Two Protocols</h3>
+ <p>
+  HTTP/1.1 has been around for more than a decade. With Google’s SPDY leading the way in 2015, the IETF (Internet Engineering Task Force) gave us HTTP/2, which introduces several features to reduce page load times. Let’s compare HTTP2 Vs. HTTP1.1 in detail.<br><br>
+  HTTP/2 achieves faster webpage loading without performance optimizations that require extensive human efforts in terms of development. It significantly reduces the complexities that had crept into HTTP/1.1 and gives us a robust protocol which, though not without its flaws, will perhaps stand the test of time. Before making this leap forward, let’s trace our steps back to when the internet was in its infancy to understand how the different versions evolved into the current form.
+ </p>
+ <h3 style="font-size: 30px;">The Beginnings of HTTP & The Internet</h3>
+ <p>
+  Our story begins in 1969, with a program called Advanced Research Projects Agency Network (ARPANET). ARPANET used packet switching and allowed multiple computers to communicate with each other on a single network. However, this was just a by-product. The original intention behind ARPANET was to design a time-sharing system that allowed research institutes to share their computer resources for effective utilization of processing power.<br><br>
+  Before then, sometime during the 19th century, the seeds for the existence of the internet as we know it today had already been sown with the invention of electricity and the telegraph. With Morse sending the first telegraphic message in 1844 and the first cable being laid across Atlantic, the telegraph network infrastructure had spread its roots through continents and across oceans. In years to come, this would become the very foundation on which the internet was built. In 1973, Kahn and Cerf designed the TCP/IP protocol suite which was adopted by ARPANET a decade later, and from this point on, we witness the development of an interconnected network. The internet took a more recognizable form with the invention of the World Wide Web (that used HTTP as its underlying protocol) by Tim Berners-Lee and the Commercial Internet eXchange (CIX) that allowed a free exchange of TCP/IP traffic between ISPs.
+ </p>
+ <h3 style="font-size: 30px;">
+  Evolution of HTTP
+ </h3>
+ <p>
+  HTTP (Hypertext Transfer Protocol) is a set of rules that runs on top of the TCP/IP suite of protocols and defines how files are to be transferred between clients and servers on the world wide web.
+ </p>
+ <img alt="HTTP Protocol Process" src="https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http-protocol.png">
+<h3 style="font-size: 30px;">HTTP/1.x vs HTTP/2: A Comparative Study</h3>
+<p>
+  HTTP2 Vs. HTTP1 is not a debate at all. HTTP2 is much faster and more reliable than HTTP1. HTTP1 loads a single request for every TCP connection, while HTTP2 avoids network delay by using multiplexing.<br><br>
+
+HTTP is a network delay sensitive protocol in the sense that if there is less network delay, then the page loads faster. However, an impressive increase in network bandwidth only slightly improves page load time. This is key to understanding the differences in performance efficiencies between the different versions of HTTP. Back in the day when people used dial up modems web pages were simple and it was the actual data transfer between the server and the client that contributed towards the largest chunk of the page load time. Today the actual downloading of resources from server takes a negligible portion of the total page load time due to the tremendous increase in bandwidth availability. It is the time taken to establish the TCP connection and making requests that impacts performance. It was initially recommended to use only two connections per hostname but today most browsers use six connections per hostname. When we talk about http vs http2 in terms of performance it is important to note that a lot of performance optimizations adopted by HTTP/1.1 introduced complexities in terms of developmental efforts as well as network congestion that HTTP/2 attempts to address.<br><br>
+
+The table below points out the differentiating factors between http2 vs http1:</p><br><br>
+
+<h3 style="text-align: center; font-size: 20px;">Some key diff between HTTP1 vs HTTP2</h3>
+<div style="display:flex; justify-content: space-around; margin:auto; background-color: skyblue;">
+   <div>
+    <h1 style="text-align: center;">HTTP1</h1>
+    <ul>
+      <li>Slower and less efficient</li>
+      <li>Developers have less control over prioritization</li>
+      <li>No weighted prioritization feature</li>
+      <li>Data is send one after the other</li>
+      <li>No Hpack</li>
+      <li>No Server push</li>
+      <li>Slow loading time</li>
+    </ul>
+   </div>
+   
+   <div>
+    <h1 style="text-align: center;">HTTP2</h1>
+    <ul>
+        <li>Much faster and more efficient</li>
+        <li>Developers have hands-on, detailed control over prioritization</li>
+        <li>Weighted prioritization feature available</li>
+        <li>Data is send all at once (multiplexing)</li>
+        <li>Yes Hpack</li>
+        <li>Yes Server push</li>
+        <li>Fast loading time</li>
+    </ul>   
+   </div>
+</div>
+<br><br>
+<p>
+  Header CompressionHeaders are sent on every request leading to a lot of duplicate data being sent uncompressed across the wire.Header compression is included by default in HTTP/2 using HPACK.Performance OptimizationProvides support for caching to deliver pages faster.Spriting, concatenating, inlining, domain sharding are some of the optimizations used as a workaround to the ‘six connections per host’ rule.Removes the need for unnecessary optimization hacks.Protocol TypeText based protocol that is in the readable form.It is a binary protocol (HTTP requests are sent in the form of 0s and 1s). Needs to be converted back from binary in order to read it.SecuritySSL is not required but recommended. Digest authentication used in HTTP1.1 is an improvement over HTTP1.0. HTTPS uses SSL/TLS for secure encrypted communication.Though security is still not mandatory, it is mostly encrypted (though it is not enforced) since almost all clients require traffic to be encrypted. It also has some minimum standards, such as minimum key size for encryption. TLS 1.2 etc.<br><br>
+</p>
+
+
+
+</body>
+</html>
